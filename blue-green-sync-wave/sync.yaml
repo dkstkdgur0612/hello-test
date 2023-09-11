@@ -3,6 +3,7 @@ kind: Job
 metadata:
   generateName: success-job-
   annotations:
+    argocd.argoproj.io/sync-wave: "0"
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
