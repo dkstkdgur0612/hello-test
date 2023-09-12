@@ -4,11 +4,11 @@ metadata:
   name: test-application-set
 spec:
   generators:
-    - git:
-        repoURL: https://github.com/dkstkdgur0612/hello-test.git
-        revision: HEAD
-        directories:
-          - path: matrix-generator-test/*
+  - git:
+      repoURL: https://github.com/dkstkdgur0612/hello-test.git
+      revision: HEAD
+      directories:
+        - path: matrix-generator-test/*
   template:
     metadata:
       name: '{{path}}-myapp'
