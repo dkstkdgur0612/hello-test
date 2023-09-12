@@ -15,7 +15,7 @@ spec:
     spec:
       project: 'default'
       source:
-        repoURL: https://github.com/argoproj/argo-cd.git
+        repoURL: https://github.com/dkstkdgur0612/hello-test.git
         targetRevision: HEAD
         path: '{{path}}'
       destination:
