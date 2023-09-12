@@ -18,6 +18,10 @@ spec:
         argocd.argoproj.io/sync-wave: '{{sync-wave}}'
       name: '{{name}}'
     spec:
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
       project: 'default'
       source:
         repoURL: https://github.com/dkstkdgur0612/hello-test.git
