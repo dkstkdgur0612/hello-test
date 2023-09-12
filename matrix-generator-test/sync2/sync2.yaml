@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+  name: sync2
+  labels:
+    app: sync2
+spec:
+  selector:
+    matchLabels:
+      app: sync2
+  replicas: 1
+  template:
+    metadata:
+      name: sync2
+      labels:
+        app: sync2
+    spec:
+      initContainers:
+        - name: init-sync2
+          image: alpine
+          command: ["sh", "-c", "sleep 300"]
+      containers:
+        - name: sync2
+          image: alpine
+          command: ["sh", "-c", "sleep 86400"]
