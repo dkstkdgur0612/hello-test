@@ -11,7 +11,7 @@ spec:
         - path: matrix-generator-test/*
   template:
     metadata:
-      name: '{{path}}-myapp'
+      name: '{{path.basename}}-myapp'
     spec:
       project: 'default'
       source:
