@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: test-application-set
+spec:
+  generators:
+  - list:
+      items:
+        - path: matrix-generator-test/sync1/
+          name: app1
+          sync-wave: 1
+        - path: matrix-generator-test/sync2/
+          name: app2
+          sync-wave: 2
+  template:
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-wave: '{{sync-wave}}'
+      name: '{{name}}'
+    spec:
+      project: 'default'
+      source:
+        repoURL: https://github.com/dkstkdgur0612/hello-test.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
