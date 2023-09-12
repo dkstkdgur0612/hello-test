@@ -5,7 +5,7 @@ metadata:
 spec:
   generators:
   - list:
-      items:
+      elements:
         - path: matrix-generator-test/sync1/
           name: app1
           sync-wave: 1
