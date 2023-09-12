@@ -6,12 +6,12 @@ spec:
   generators:
   - list:
       elements:
-        - path: matrix-generator-test/sync1/
-          name: app1
-          sync-wave: 1
-        - path: matrix-generator-test/sync2/
-          name: app2
-          sync-wave: 2
+      - path: matrix-generator-test/sync1/
+        name: app1
+        sync-wave: 1
+      - path: matrix-generator-test/sync2/
+        name: app2
+        sync-wave: 2
   template:
     metadata:
       annotations:
