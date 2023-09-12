@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/dkstkdgur0612/hello-test.git
         revision: HEAD
         directories:
-          - path: matrix-generator/*
+          - path: matrix-generator-test/*
   template:
     metadata:
       name: '{{path}}-myapp'
