@@ -4,7 +4,6 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
   name: sync2
-  namespace: default
   labels:
     app: sync2
 spec:
